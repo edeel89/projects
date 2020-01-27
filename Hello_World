@@ -1,4 +1,4 @@
-#After launching the EC2 instanc, connect to terminal via SSH-key.pem
+#After launching the EC2 instance, connect to terminal via SSH-key.pem
 yum update -y
 Install Apache
 yum install httpd -y
@@ -11,6 +11,7 @@ cd /var/www/html
 </head>
 <body>
 <h1>Hello World!</h1>
+<h2>My name is Adeel Arshad and this is a test.</h2>
 </body>
 </html>
 
@@ -22,5 +23,5 @@ service httpd status
 # for restarting at reboot
 chkconfig httpd on 
 
-chmod 400 mykeypair.pem
-ssh -i mykeypair.pem public ip
+Here is the IP Address to access the website running on EC2 instance:
+34.201.36.60

@@ -1,0 +1,26 @@
+#After launching the EC2 instanc, connect to terminal via SSH-key.pem
+yum update -y
+Install Apache
+yum install httpd -y
+cd /var/www/html
+
+#Create an index.html file with the following content
+<html>
+<head>
+<title>Hello World</title>
+</head>
+<body>
+<h1>Hello World!</h1>
+</body>
+</html>
+
+#start Apache
+Sudo su
+service httpd start
+#check status
+service httpd status
+# for restarting at reboot
+chkconfig httpd on 
+
+chmod 400 mykeypair.pem
+ssh -i mykeypair.pem public ip
